@@ -539,4 +539,5 @@ function problem(x){
 
 
 
-console.log(problem(0.03))
+console.log(problem(0.03));
+console.log(problem(3));
