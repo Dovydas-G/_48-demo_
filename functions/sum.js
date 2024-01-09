@@ -17,5 +17,5 @@ function kainaSuPVM(kainaBePVM){
 }
 
 
-console.log(kainaSuPVM(100))
-console.log(kainaSuPVM(200))
+console.log(kainaSuPVM(100));
+console.log(kainaSuPVM(200));

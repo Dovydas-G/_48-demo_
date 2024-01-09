@@ -1,0 +1,33 @@
+{
+  "name": "_48-demo_",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "object": "node --watch kintamieji/object.js",
+    "hof": "node --watch metodai/array-hof.js",
+    "arrays": "node --watch metodai/array.js",
+    "metodaiNumber": "node --watch metodai/metodaiNumber.js",
+    "tipas": "node --watch tipas/tipas.js",
+    "marksAverage": "node --watch marksaverage/marksAverage.js",
+    "for": "node --watch ciklas/for.js",
+    "if": "node --watch palyginimas/if.js",
+    "sum": "node --watch functions/sum.js",
+    "empty": "node --watch functions/empty.js",
+    "uzduotys": "node --watch kintamieji/uzduotys/uzduotys.js",
+    "codewars": "node --watch kintamieji/codeWars/codewars.js",
+    "array": "node --watch kintamieji/array/array.js",
+    "boolean": "node --watch kintamieji/boolean/boolean.js",
+    "string": "node --watch kintamieji/string.js",
+    "number": "node --watch kintamieji/number.js",
+    "number-nodemon": "nodemon kintamieji/number.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dovydas (https://github.com/Dovydas-G)",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
