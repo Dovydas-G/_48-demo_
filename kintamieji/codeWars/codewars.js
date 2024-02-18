@@ -4728,4 +4728,86 @@
 // console.log(longestConsec([], 2))
 
 
+// function wave(str){
+    
+//     const strArr = [];
+    
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] !== ' ') {
+//             strArr.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
+//         }
+//     }
+    
+//     return strArr;
+// }
 
+// console.log(wave('hello'))
+// console.log(wave("two words"))
+// console.log(wave(" gap "))
+
+// function expandedForm(num) {
+
+//     const numToStr = '' + num;
+    
+//     const zero = '0';
+//     let index = 0;
+//     const indexArr = [];
+
+//     for (let i = 0; i < numToStr.length; i++) {
+//         if (numToStr[i] !== '0') {
+//             index = i;
+//             indexArr.push(index);
+//         }
+//     }
+
+//     const numArr = [];
+    
+//     for (let i = 0; i < indexArr.length; i++) {
+//         const times = numToStr.slice(indexArr[i] + 1).length;
+//         numArr.push(numToStr.slice(indexArr[i], indexArr[i] + 1) + zero.repeat(times));
+//     }
+
+//     return numArr.join(' + ');
+    
+// }
+
+// console.log(expandedForm(70304))
+// console.log(expandedForm(42))
+
+
+// function noBoringZeros(n) {
+    
+//     const numToStr = '' + n;
+
+//     let index = 0;
+//     const indexArr = [];
+
+//     for (let i = 0; i < numToStr.length; i++) {
+//         if (numToStr[i] !== '0') {
+//             index = i;
+//             indexArr.push(index);
+//         }
+//     }
+//     const until = indexArr[indexArr.length -1] + 1;
+
+//     return + numToStr.slice(0, until);
+
+// }
+
+// console.log(noBoringZeros(1050))
+
+
+function sumEvenNumbers(input) {
+    
+    let sum = 0;
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] % 2 === 0) {
+            sum += input[i];
+        }
+    }
+    return sum;
+}
+
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+  
