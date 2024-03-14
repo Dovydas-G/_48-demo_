@@ -58,6 +58,11 @@ const productsObj = [
     {
         category: 'Chocolates',
         name: 'Tupla',
+        price: 2,
+    },
+    {
+        category: 'Chocolates',
+        name: 'Snickers',
         price: 1,
     },
 ];
@@ -85,6 +90,7 @@ const carsObjCopy = {};
 for (const key in carsObj) {
     carsObjCopy[key] = carsObj[key];
 };
+
 console.log(carsObjCopy);
 
 
@@ -121,6 +127,7 @@ let result = 0;
 for (let i = 0; i < numsArr.length; i++) {
     result += numsArr[i];
 }
+
 console.log(result);
 
 
@@ -155,7 +162,11 @@ function numberOfObjectProperties (obj) {
     return count;
 };
 
-console.log(numberOfObjectProperties({Pavadinimas: 'The Secret', Autorius: 'Rhonda Byrne',Metai: '2020',}));
+console.log(numberOfObjectProperties({
+                                    Pavadinimas: 'The Secret',
+                                    Autorius: 'Rhonda Byrne',
+                                    Metai: '2020',
+                                    }));
 
 //9. Sąlyginis Objektų Atrinkimas: Turite vartotojų masyvą su objektais, kuriuose yra vardas ir amžius. Naudodami for of ciklą, 
     //išveskite tik tuos vartotojus, kurių amžius yra didesnis nei 18.
