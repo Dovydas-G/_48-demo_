@@ -4797,17 +4797,689 @@
 // console.log(noBoringZeros(1050))
 
 
-function sumEvenNumbers(input) {
+// function sumEvenNumbers(input) {
     
-    let sum = 0;
+//     let sum = 0;
 
-    for (let i = 0; i < input.length; i++) {
-        if (input[i] % 2 === 0) {
-            sum += input[i];
-        }
-    }
-    return sum;
-}
+//     for (let i = 0; i < input.length; i++) {
+//         if (input[i] % 2 === 0) {
+//             sum += input[i];
+//         }
+//     }
+//     return sum;
+// }
 
-console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+// console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
   
+
+// function sumDigPow(a, b) {
+    
+//     const numArr = [];
+
+//     const numTwoDArr = [];
+
+//     for (let i = a; i <= b; i++ ) {
+//        numArr.push(i);
+//        numTwoDArr.push(('' + i).split(''))
+//     }
+
+//     const numTimesExponent = [];
+
+//     for (let i = 0; i < numTwoDArr.length; i++) {
+//         let sum = 0
+//         for (let j = 0; j < numTwoDArr[i].length; j++) {
+//                 sum += ((+ numTwoDArr[i][j]) ** (j + 1));
+//             } numTimesExponent.push(sum);  
+//     }
+    
+//     const result = [];
+
+//     for (let i = 0; i < numArr.length; i++) {
+//         if (numArr[i] === numTimesExponent[i]) {
+//             result.push(numArr[i]);
+//         }
+//     }
+//     return result;
+// }
+  
+
+// console.log(sumDigPow(1, 10))
+// console.log(sumDigPow(1, 100))
+// console.log(sumDigPow(90, 100))
+// console.log(sumDigPow(90, 150))
+// console.log(sumDigPow(50, 150))
+// console.log(sumDigPow(10, 150))
+
+
+
+
+// function camelCase (s) {
+//     const strArr = this.split(' ');
+
+//     let str = '';
+
+//     for (let i = 0; i < strArr.length; i++) {
+//         str += strArr[i][0].toUpperCase() + strArr[i].slice(1).toLowerCase();
+//     }
+
+//     return str;
+// }
+
+// console.log(camelCase('camel case word'))
+
+
+
+// String.prototype.camelCase = function() {
+//   return this
+//   .split(" ")
+//   .map(s => {
+//     if (!s) return s
+//     return s[0].toUpperCase()+s.substring(1)
+//   })
+//   .join('')
+  
+// }
+
+// console.log('camel case word'.camelCase())
+
+
+// const multiplicationTable = function(size) {
+
+//   const twoDArr = [];
+
+//   for(let i = 1; i <= size; i++) {
+//       const arr = [];
+//     for (let j = 1; j <= (size * size); j++) {
+//         if (j % i === 0) {
+//           arr.push(j);
+//         }
+//       }
+//       twoDArr.push(arr.slice(0, size));
+//   }
+//   return twoDArr;
+// }
+
+
+// console.log(multiplicationTable(4))
+
+
+// function calculate(str) {
+
+//   let text = '';
+  
+//   let splitedPlus = '' + str.split('plus');
+//   let splitedMinus = '' + splitedPlus.split('minus');
+//   let numArr = splitedMinus.split(',');
+  
+//   for (let i = 0; i < str.length; i++) {
+//     if (!(str[i] >= '0' && str[i] <= '9')) {
+//       text += str[i];
+//     }
+//   }
+  
+//     let splitedText = text.split('s').slice(0, -1);
+    
+//     let arr = [];
+
+//     for (let i = 0; i < numArr.length; i++) {
+//         arr.push(numArr[i]) && arr.push(splitedText[i])   
+//     }
+
+//     let content = arr.slice(0, -1);
+//     let count = 0;
+
+//     for (let i = 0; i < content.length; i++) {
+//         if (content[i] === 'plu') {
+//           count += (+ content[i += 1]);
+//         }
+//         else if (content[i] === 'minu') {
+//           count -= (+ content[i += 1]);
+//         }
+//         else count += (+ content[i]);
+//     }
+
+//     return count;
+// }
+
+// console.log(calculate('1plus2plus3plus4'))
+// console.log(calculate('1minus2minus3minus4'))
+// console.log(calculate('1plus2plus3minus4'))
+// console.log(calculate('230minus174plus434'))
+
+
+// let math = {
+//   '+' : function (x, y) { return x + y},
+//   '-' : function (x, y) { return x - y}
+// }
+
+// console.log(math['+'](4, 5))
+
+
+
+
+
+// let math = {
+//   '%' : function (x, y) { return  x + x * (y / 100) },
+//   '-' : function (x, y) { return x - y}
+// }
+
+// console.log(math['%'](30, 20))
+
+
+
+// function count (str) {
+//     let arr = str.split(' ');
+
+//     let result = 0;
+    
+//     for (let i = 0; i < arr.length; i++) {
+//          if (arr[i] === '+') {
+//             if (arr[i + 2] === '%') {
+//                result -= (+ arr[i + 1])
+//             }else result += ( + arr[i += 1]);
+//         }
+//         else if (arr[i] === '-') {
+//             if (arr[i + 2] === '%') {
+//                 result -= (+ arr[i + 1])
+//              } else result -= ( + arr[i += 1]);
+//         }
+//         else if (arr[i] === '*') {
+//             if (arr[i + 2] === '%') {
+//                 result -= (+ arr[i + 1])
+//              } else result *= ( + arr[i += 1]);
+//         }
+//         else if (arr[i] === '/') {
+//             if (arr[i + 2] === '%') {
+//                 result -= (+ arr[i + 1])
+//              } else result /= ( + arr[i += 1]);
+//         }
+//         else if (arr[i] === '%' && arr[i + 3] === '%') {
+//                 console.log(((+ arr[i - 1]) + (+ arr[i - 1]) * (+ arr[i + 2] / 100)) / 100)
+//         }
+//         else if (arr[i] === '%') {
+//            let percentages = 0;
+//            if (arr.length < 3) {
+//                percentages += (+ arr[i - 1] / 100);
+//                return percentages;
+//            }
+//            else if (arr[1] === '%') {
+//                 result -= (+ arr[i - 1]);
+//                 result += (+ arr[i - 1] / 100);  
+//            }
+           
+//            else {
+                
+//                percentages += (+ arr[i - 1] / 100);
+               
+               
+//                 if (arr[i - 2] === '+') {
+//                     result += (result * percentages);
+                    
+//                 }
+//                 if (arr[i - 2] === '-') {
+//                     result -= (result * percentages);
+
+//                 }
+//                 if (arr[i - 2] === '*') {
+//                     result -= (+ arr[i - 3]);
+//                     result += (+ arr[i - 3]) * percentages;
+//                 }
+//                 if (arr[i - 2] === '/') {
+//                     result -= (+ arr[i - 3]);
+//                     result += (+ arr[i - 3]) / percentages;
+//                 }
+        
+//             }
+//        }
+//         else {
+//             result += ( + arr[i]);
+//         }
+        
+
+//     }
+//     // return result;
+// }
+
+
+// console.log(count('20 % + 10 %'))
+
+
+// function toWeirdCase(string){
+    
+//     const strArr = string.split(' ');
+//     let str = '';
+
+//    for (let i = 0; i < strArr.length; i++) {
+//         let words = '';
+//         for (let j = 0; j < strArr[i].length; j++) {
+//             if (j % 2 === 0) {
+//                 words += strArr[i][j].toUpperCase();
+//             }else words += strArr[i][j];
+//         }
+//         str += words + ' ';
+//    }
+//    return str.slice(0, -1);
+// }
+
+// console.log(toWeirdCase('This is a test'))
+
+
+// function validate(n){
+//     const strArr = ('' + n).split('');
+    
+//     const numArr = [];
+
+//     for (let i = 0; i < strArr.length; i++) {
+//         if (strArr.length % 2 !== 0) {
+//             if (i % 2 !== 0) {
+//                 let double = (+ strArr[i]) * 2;
+//                 if (9 < double) {
+//                     numArr.push(double / 2);
+//                 }else numArr.push(double);
+//             }else numArr.push(+ strArr[i]);
+//         } else {
+//             if (i % 2 === 0) {
+//                 let double = (+ strArr[i]) * 2;
+//                 if (9 < double) {
+//                     numArr.push(double / 2);
+//                 }else numArr.push(double);
+//             }else numArr.push(+ strArr[i]);
+//         }
+//     }
+    
+//     let result = 0;
+
+//     for (let i = 0; i < numArr.length; i++) {
+//         result += numArr[i]
+//     }
+
+//     return result % 10 === 0;
+// }
+
+
+// console.log(validate(123))
+// console.log(validate(1))
+// console.log(validate(2121))
+// console.log(validate(1230))
+
+
+// function comp(array1, array2){
+    
+//     if (array1 === null || array2 === null) {
+//         return false;
+//     }
+
+//     const arr = [];
+
+//     for (let i = 0; i < array1.length; i++) {
+//         arr.push(array1[i] ** 2);
+//     }
+
+//     let sorted1 = arr.sort((a, b) => a - b);
+//     let sorted2 = array2.sort((a,b) => a - b);
+    
+//     let count = 0;
+
+//     for (let i = 0; i < sorted1.length; i++) {
+//         if (sorted1[i] === sorted2[i]) {
+//             count++;
+//         }
+//     }
+
+//     return count === sorted1.length;
+    
+//   }
+
+//   let b1 = [null, null]
+//   let b2 = [3, 4]
+
+//   let a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+//   let a2 = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19];
+// console.log(comp(a1, a2))
+// console.log(comp(b1, b2))
+
+
+// function decode(string) {
+   
+//     const obj1 = {
+//         'a': '1',
+//         'e': '2',
+//         'i': '3',
+//         'o': '4',
+//         'u': '5'
+//     }
+//     const obj2 = {
+//         '1': 'a',
+//         '2': 'e',
+//         '3': 'i',
+//         '4': 'o',
+//         '5': 'u'
+//     }
+
+//     let str = '';
+
+//     for (let i = 0; i < string.length; i++) {
+//         if (obj1[string[i]] || obj2[string[i]]) {
+//             str += obj1[string[i]] || obj2[string[i]];
+//         } else str += string[i];
+//     }
+//     return str;
+// }
+
+
+
+
+// function encode(string) {
+//     const obj1 = {
+//         'a': '1',
+//         'e': '2',
+//         'i': '3',
+//         'o': '4',
+//         'u': '5'
+//     }
+
+//     let str = '';
+
+//     for (let i = 0; i < string.length; i++) {
+//         if (obj1[string[i]]) {
+//             str += obj1[string[i]];
+//         } else str += string[i];
+//     }
+//     return str;
+
+// }
+  
+//   function decode(string) {
+//     const obj2 = {
+//         '1': 'a',
+//         '2': 'e',
+//         '3': 'i',
+//         '4': 'o',
+//         '5': 'u'
+//     }
+
+//     let str = '';
+
+//     for (let i = 0; i < string.length; i++) {
+//         if (obj2[string[i]]) {
+//             str += obj2[string[i]];
+//         } else str += string[i];
+//     }
+//     return str;
+//   }
+
+
+// console.log(decode('h2ll4'))
+// console.log(encode('hello'))
+// console.log(decode('How are you today?'))
+
+
+
+// function toFixed (number, fractionDigits) {
+//     const numToStr = ('' + number);
+    
+//     let index = 0;
+//     let fixedNum = '';
+//     let zeros = '';
+//     let count = 0;
+    
+    
+//     for (let i = 0; i < numToStr.length; i++) {
+//         if (numToStr[i] === '.') {
+//             index = i;
+//         } else {
+//             if (i > index) {
+//                 count++;
+//             }
+//         }  
+//     }
+    
+//     const lengthAfterDot = (number < 0) ? count - 1 : count;
+    
+//     const repeatZeros = (number < 0) ? (fractionDigits - lengthAfterDot) : fractionDigits - count;
+    
+//     const numLength = (index + fractionDigits !== 0) ? index + fractionDigits : numToStr.length;
+
+
+//     for (let i = 0; i < repeatZeros; i++) {
+//         zeros += '0';
+//     }
+   
+//     for (let i = 0; i <= numLength; i++) {
+//        if (index === 0 && fractionDigits === 0) {
+//             if (i !== numLength) {
+//                 fixedNum += numToStr[i];
+//             }
+//         }
+//         else if (fractionDigits === 0) {
+//             if (numToStr[numLength + 1] >= 5) {
+//                 if (i === (numLength - 1)) {
+//                     fixedNum += ('' + (+(numToStr[i]) + 1));
+                    
+//                 } else {
+//                     if (numToStr[i] !== '.') {
+//                         fixedNum += numToStr[i];
+//                     }
+//                 }  
+//             } else {
+//                 if (numToStr[i] !== '.') {
+//                     fixedNum += numToStr[i];
+//                 }
+//             }
+//         }
+//         else if (index === 0) {
+//             if (i !== numLength) {
+//             fixedNum = numToStr + '.';
+//             fixedNum += zeros;
+//             }   
+//         }
+//         else if (fractionDigits >= lengthAfterDot) {
+//             fixedNum = numToStr + zeros; 
+//         } else {
+//             if (numToStr[numLength + 1] >= 5) {
+//                 if (i === numLength) {
+//                     fixedNum += ('' + (+(numToStr[i]) + 1));
+ 
+//                 } else {
+//                     fixedNum += numToStr[i];
+        
+//                 } 
+//             } else {
+//                 fixedNum += numToStr[i];
+//             }
+//         }
+//     }
+
+//     return fixedNum;
+// }
+
+
+// // console.log(toFixed(425.556, 0))
+
+// // console.log((425.556).toFixed(0))
+
+
+
+// console.log(toFixed(3, 0), '-->', '3');
+// console.log(toFixed(-3, 0), '-->', '-3');
+// console.log(toFixed(3.14, 0), '-->', '3');
+// console.log(toFixed(-3.14, 0), '-->', '-3');
+// console.log(toFixed(3.11, 1), '-->', '3.1');
+// console.log(toFixed(-3.12, 1), '-->', '-3.1');
+// console.log(toFixed(3.14, 5), '-->', '3.14000');
+// console.log(toFixed(-3.14, 5), '-->', '-3.14000');
+// console.log(toFixed(3.1412, 3), '-->', '3.141');
+// console.log(toFixed(-3.1412, 3), '-->', '-3.141');
+// console.log(toFixed(3.14, 2), '-->', '3.14');
+// console.log(toFixed(-3.14, 2), '-->', '-3.14');
+// console.log(toFixed(3.14159, 5), '-->', '3.14159');
+// console.log(toFixed(-3.14159, 5), '-->', '-3.14159');
+// console.log(toFixed(3.14, 4), '-->', '3.1400');
+// console.log(toFixed(-3.14, 4), '-->', '-3.1400');
+// console.log(toFixed(3.1412, 0), '-->', '3');
+// console.log(toFixed(-3.1412, 0), '-->', '-3');
+// console.log(toFixed(3.1, 2), '-->', '3.10');
+// console.log(toFixed(-3.1, 2), '-->', '-3.10');
+// console.log(toFixed(3, 3), '-->', '3.000');
+// console.log(toFixed(-3, 3), '-->', '-3.000');
+
+// console.log(toFixed(3.14159, 3), '-->', '3.142');
+// console.log(toFixed(-3.14159, 3), '-->', '-3.142');
+
+// const firstNumObj = {
+//     '1': 'pirma',
+//     '2': 'antra',
+//     '3': 'trecia',
+//     '4': 'ketvirta',
+//     '5': 'penkta',
+//     '6': 'sesta',
+//     '7': 'septinta',
+//     '8': 'astunta',
+//     '9': 'devinta',
+//     '10': 'desimt',
+//     '11': 'venuolika',
+//     '12': 'dvylika',
+//     '13': 'trylika',
+//     '14': 'keturiolika',
+//     '15': 'penkiolika',
+//     '16': 'sesiolika',
+//     '17': 'septyniolika',
+//     '18': 'astuoniolika',
+//     '19': 'devyniolika',
+//     '20': 'dvidesimt',
+//     '21': 'dvidesimt pirma',
+//     '22': 'dvidesimt antra',
+//     '23': 'dvidesimt trecia',
+//     '24': 'dvidesimt ketvirta',
+// }
+
+// const secondNumObj = {
+//     '10': 'desimt',
+//     '20': 'dvidesimt',
+//     '30': 'trisdesimt',
+//     '40': 'keturiasdesimt',
+//     '50': 'penkiasdesimt',
+//     '60': 'sesiasdesimt',
+// }
+
+// const thirdNumObj = {
+//     '0': 'nulis',
+//     '1': 'viena',
+//     '2': 'dvi',
+//     '3': 'trys',
+//     '4': 'keturios',
+//     '5': 'penkios',
+//     '6': 'sesios',
+//     '7': 'septynios',
+//     '8': 'astuonios',
+//     '9': 'devynios',
+// }
+
+
+
+// const start = new Date()
+// const hours = '' + start.getHours();
+// const minutes = '' + start.getMinutes();
+// const seconds = '' +  start.getSeconds();
+
+
+
+// const h = firstNumObj[hours];
+// let m = 0;
+// let s = 0;
+
+// if (seconds < 10) {
+//     s = (thirdNumObj[seconds]);
+// }
+// else if (seconds < 20) { 
+//     s = (firstNumObj[seconds]);
+// }
+
+// else  {
+//     s = (seconds[1] < 1 ? secondNumObj[seconds[0] + '0'] : secondNumObj[seconds[0] + '0'] + ' ' + thirdNumObj[seconds[1]]);
+// }
+
+
+// if (minutes < 10) {
+//     m = (thirdNumObj[minutes]);
+    
+// }
+// else if (minutes < 20) { 
+//     m = (firstNumObj[minutes]);
+// }
+
+// else  {
+//     m = (minutes[1] < 1 ? secondNumObj[minutes[0] + '0'] : secondNumObj[minutes[0] + '0'] + ' ' + thirdNumObj[minutes[1]]);
+// }
+
+// const time = `${h} val : ${m} min : ${s} sec`;
+
+// console.log(time)
+
+
+
+// function names(arr) {
+
+//     const obj = {
+//         'ė': 'e',
+//         's': 'i',
+//     }
+
+//     const namesArr = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         let lastLetter = arr[i][arr[i].length - 1];
+//         let penultimateLetter = arr[i][arr[i].length - 2];
+//         if (obj[lastLetter] && penultimateLetter !== 'i' && penultimateLetter !== 'u' && penultimateLetter !== 'y') {
+//             namesArr.push(arr[i].slice(0, -1) + obj[lastLetter])
+//         }
+//         else if (penultimateLetter === 'i' || penultimateLetter === 'y') {
+//             namesArr.push(arr[i].slice(0, -1));
+//         }
+//         else if (penultimateLetter === 'u') {
+//             namesArr.push(arr[i].slice(0, -2) + 'au');
+//         }
+//         else {
+//             namesArr.push(arr[i]);
+//         }
+       
+//     }
+
+//     return namesArr;
+
+// }
+
+
+
+// console.log(names(['Dovydas', 'Sandra', 'Eglė', 'Algis', 'Ona', 'Aistis', 'Giedrius', 'Kęstutis', 'Laimis', 'Laisvydas', 'Naglis', 'Ramojus', 'Tautvilis','Giedrys']))
+
+
+
+
+
+// let firstName = 'Dovydas';
+
+// const lastLetter = firstName[firstName.length - 1].toLowerCase();
+// const penultimateLetter = firstName[firstName.length - 2].toLowerCase();
+
+// let greetingName = '';
+
+// if (lastLetter === 'ė' && penultimateLetter !== 'i' && penultimateLetter !== 'u' && penultimateLetter !== 'y') {
+//     greetingName = (firstName.slice(0, -1) + 'e');
+// }
+// else if (lastLetter === 's' && penultimateLetter !== 'i' && penultimateLetter !== 'u' && penultimateLetter !== 'y') {
+//     greetingName = (firstName.slice(0, -1) + 'i');
+// }
+// else if (penultimateLetter === 'u') {
+//     greetingName = (firstName.slice(0, -2) + 'au');
+// }
+// else if (penultimateLetter === 'i' || penultimateLetter === 'y') {
+//     greetingName = (firstName.slice(0, -1));
+// }
+// else {
+//     greetingName = (firstName);
+// }
+
+// console.log(greetingName)
+
+
