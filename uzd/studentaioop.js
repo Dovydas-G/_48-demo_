@@ -187,7 +187,7 @@ class CreditCard {
 
     transferMoney (money) {
     
-        if (this.balance > 0) {
+        if (this.balance > 0 && this.balance >= money) {
             if (this.limit >= money) {
                 this.balance -= money;
                 return `Sėkminga operacija, jūs pervedėte ${money}$`;
@@ -199,16 +199,59 @@ class CreditCard {
 
 }
 
+console.log('<--------------------transferMoney>')
 
 const firstCard = new CreditCard ('2222-3333-4444-5555', '234', '2025-03-25', 300, 900);
 console.log(firstCard.transferMoney(300));
 console.log(firstCard.transferMoney(300));
-console.log(firstCard.transferMoney(300));
+console.log(firstCard.transferMoney(200));
 console.log(firstCard.transferMoney(1));
-
+console.log(firstCard.transferMoney(200));
 console.log(firstCard);
 
 
-const secondCard = new CreditCard ('5555-6666-7777-8888', '567', '2024-02-09', 500, 1500);
+console.log('<------------------------validity>')
+
+const secondCard = new CreditCard ('5555-6666-7777-8888', '567', '2024-04-09', 500, 1500);
 console.log(secondCard.validity());
+
+// Dalykai:
+//Sukurkite klasę "Dalykas", turinčią pavadinimą ir kiekį. 
+//Galite sukurti metodus, leidžiančius pridėti arba pašalinti kiekius.
+
+console.log('<----------------------------------5>')
+
+class Thing {
+    constructor (type, name, amount) {
+        this.type = type;
+        this.name = name;
+        this.amount = amount;
+    }
+
+    aboutThing () {
+        return `Tipas: ${this.type} 
+        Gamintojas: ${this.name} 
+        Kiekis: ${this.amount}vnt`
+    }
+
+    add (addVnt) {
+        this.amount += addVnt;
+    }
+
+    remove (removeVnt) {
+        this.amount -= removeVnt;
+    }
+}
+
+console.log('<-------------------------------Add>')
+
+const samsungTv = new Thing('Televizorius', 'Samsung', 99);
+samsungTv.add(20);
+console.log(samsungTv.aboutThing());
+
+console.log('<-----------------------------Remove>')
+
+const samsungPhone = new Thing('Mobilusis telefonas', 'Samsung', 150);
+samsungPhone.remove(51);
+console.log(samsungPhone.aboutThing());
 
